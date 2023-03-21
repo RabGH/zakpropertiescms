@@ -19,10 +19,10 @@ export default {
             type: 'string',
             options: {
                 list: [
-                    { title: 'House', value: 'house'},
-                    { title: 'Villa', value: 'villa'},
-                    { title: 'Townhouse', value: 'townhouse'},
-                    { title: 'Apartment', value: 'apartment'},
+                    { title: 'House', value: 'House'},
+                    { title: 'Villa', value: 'Villa'},
+                    { title: 'Townhouse', value: 'Townhouse'},
+                    { title: 'Apartment', value: 'Apartment'},
                 ],
                 layout: 'radio'
             }
@@ -68,12 +68,12 @@ export default {
             of: [{type: 'string'}],
             options: {
                 list: [
-                    { title: 'Gated Community', value: 'gated-community'},
-                    { title: 'Kids Area', value: 'kids-area'},
-                    { title: 'Retail Area', value: 'retail-area'},
-                    { title: 'Grocery Store', value: 'grocery-store'},
-                    { title: 'Gym', value: 'gym'},
-                    { title: 'Pool', value: 'pool'},
+                    { title: 'Gated Community', value: 'Gated Community'},
+                    { title: 'Kids Area', value: 'Kids Area'},
+                    { title: 'Retail Area', value: 'Retail Area'},
+                    { title: 'Grocery Store', value: 'Grocery Store'},
+                    { title: 'Gym', value: 'Gym'},
+                    { title: 'Pool', value: 'Pool'},
                 ],
                 layout: 'checkbox'
             }
