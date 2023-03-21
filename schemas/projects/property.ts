@@ -20,8 +20,8 @@ export default {
             options: {
                 list: [
                     { title: 'House', value: 'house'},
-                    { title: 'Flat', value: 'flat'},
-                    { title: 'Town House', value: 'town-house'},
+                    { title: 'Villa', value: 'villa'},
+                    { title: 'Townhouse', value: 'townhouse'},
                     { title: 'Apartment', value: 'apartment'},
                 ],
                 layout: 'radio'
@@ -52,13 +52,40 @@ export default {
             type: 'number',
         },
         {
-            name: 'beds',
-            title: 'Beds',
+            name: 'plottedArea',
+            title: 'Plotted Area',
             type: 'number',
+        },
+        {
+            name: 'builtUpArea',
+            title: 'Built Up Area',
+            type: 'number',
+        },
+        {
+            name: 'amenities',
+            title: 'Amenity Types',
+            type: 'array',
+            of: [{type: 'string'}],
+            options: {
+                list: [
+                    { title: 'Gated Community', value: 'gated-community'},
+                    { title: 'Kids Area', value: 'kids-area'},
+                    { title: 'Retail Area', value: 'retail-area'},
+                    { title: 'Grocery Store', value: 'grocery-store'},
+                    { title: 'Gym', value: 'gym'},
+                    { title: 'Pool', value: 'pool'},
+                ],
+                layout: 'checkbox'
+            }
         },
         {
             name: 'bedrooms',
             title: 'Bedrooms',
+            type: 'number',
+        },
+        {
+            name: 'bathrooms',
+            title: 'Bathrooms',
             type: 'number',
         },
         {
