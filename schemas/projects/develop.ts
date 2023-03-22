@@ -1,6 +1,6 @@
 export default {
-    name: 'property',
-    title: 'Property',
+    name: 'projects',
+    title: 'Projects',
     type: 'document',
     fields: [
         {
@@ -14,9 +14,10 @@ export default {
             type: 'geopoint',
         },
         {
-            name: 'propertyType',
-            title: 'Property Type',
-            type: 'string',
+            name: 'development',
+            title: 'Development',
+            type: 'array',
+            of: [{type: 'string'}],
             options: {
                 list: [
                     { title: 'House', value: 'House'},
@@ -24,7 +25,7 @@ export default {
                     { title: 'Townhouse', value: 'Townhouse'},
                     { title: 'Apartment', value: 'Apartment'},
                 ],
-                layout: 'radio'
+                layout: 'checkbox'
             }
         },
         {
@@ -39,7 +40,7 @@ export default {
             name: 'images',
             title: 'Images',
             type: 'array',
-            of: [{type:'propertyImage'}]
+            of: [{type:'developmentImage'}]
         },
         {
             name: 'totalPrice',
@@ -49,16 +50,6 @@ export default {
         {
             name: 'squareFootage',
             title: 'Square Footage',
-            type: 'number',
-        },
-        {
-            name: 'plottedArea',
-            title: 'Plotted Area',
-            type: 'number',
-        },
-        {
-            name: 'builtUpArea',
-            title: 'Built Up Area',
             type: 'number',
         },
         {
@@ -79,30 +70,16 @@ export default {
             }
         },
         {
-            name: 'bedrooms',
-            title: 'Bedrooms',
-            type: 'number',
-        },
-        {
-            name: 'bathrooms',
-            title: 'Bathrooms',
-            type: 'number',
+            name: 'properties',
+            title: 'Properties',
+            type: 'array',
+            of: [{type: 'reference', to: [{ type: 'property' }] }],
         },
         {
             name: 'description',
             title: 'Description',
             type: 'string',
         },
-        {
-            name: 'projectId',
-            title: 'Project ID',
-            type: 'reference',
-            to: [{ type: 'projects' }],
-            options: {
-                filter: 'NOT _id == $projectId', // Exclude the current project from the list
-            },
-            weak: true, // Make the field optional
-        },        
         {
             name: 'slug',
             title: 'Slug',
