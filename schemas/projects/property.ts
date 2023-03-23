@@ -36,8 +36,8 @@ export default {
             },
         },
         {
-            name: 'images',
-            title: 'Images',
+            name: 'propertyImages',
+            title: 'Property Images',
             type: 'array',
             of: [{type:'propertyImage'}]
         },
