@@ -28,8 +28,8 @@ export default {
             }
         },
         {
-            name: 'mainImage',
-            title: 'Main Image',
+            name: 'mainPropertyImage',
+            title: 'Main Property Image',
             type: 'image',
             options: {
                 hotspot: true,
@@ -98,9 +98,6 @@ export default {
             title: 'Project ID',
             type: 'reference',
             to: [{ type: 'projects' }],
-            options: {
-                filter: 'NOT _id == $projectId', // Exclude the current project from the list
-            },
             weak: true, // Make the field optional
         },        
         {

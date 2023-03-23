@@ -29,8 +29,8 @@ export default {
             }
         },
         {
-            name: 'mainImage',
-            title: 'Main Image',
+            name: 'mainProjectImage',
+            title: 'Main Project Image',
             type: 'image',
             options: {
                 hotspot: true,
