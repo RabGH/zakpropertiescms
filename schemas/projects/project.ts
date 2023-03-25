@@ -14,6 +14,7 @@ export default {
             type: 'geopoint',
         },
         {
+            // Property Types
             name: 'development',
             title: 'Development',
             type: 'array',
@@ -28,6 +29,7 @@ export default {
                 layout: 'checkbox'
             }
         },
+        // Unit type(1-3 bedrooms) or 1-4 or 1-5 
         {
             name: 'mainProjectImage',
             title: 'Main Project Image',
@@ -36,12 +38,15 @@ export default {
                 hotspot: true,
             },
         },
+        // Developer
         {
             name: 'projectImages',
             title: 'Project Images',
             type: 'array',
             of: [{type:'developmentImage'}]
         },
+        // Off-plan or Not offplan 
+        // if off-plan complition date calender date Month / Year
         {
             name: 'totalPrice',
             title: 'Price',
