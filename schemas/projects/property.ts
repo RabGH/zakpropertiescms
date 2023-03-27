@@ -19,7 +19,6 @@ export default {
       type: 'string',
       options: {
         list: [
-          {title: 'House', value: 'House'},
           {title: 'Villa', value: 'Villa'},
           {title: 'Townhouse', value: 'Townhouse'},
           {title: 'Apartment', value: 'Apartment'},

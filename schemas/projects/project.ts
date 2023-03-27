@@ -15,21 +15,32 @@ export default {
     },
     {
       // Property Types
-      name: 'development',
-      title: 'Development',
+      name: 'projectPropertyTypes',
+      title: 'Project Property Types',
       type: 'array',
       of: [{type: 'string'}],
       options: {
         list: [
-          {title: 'House', value: 'House'},
-          {title: 'Villa', value: 'Villa'},
-          {title: 'Townhouse', value: 'Townhouse'},
-          {title: 'Apartment', value: 'Apartment'},
+          {title: 'Villas', value: 'Villas'},
+          {title: 'Townhouses', value: 'Townhouses'},
+          {title: 'Apartments', value: 'Apartments'},
         ],
         layout: 'checkbox',
       },
     },
-    // Unit type(1-3 bedrooms) or 1-4 or 1-5
+    {
+      name: 'unitType',
+      title: 'Unit Type',
+      type: 'string',
+      options: {
+        list: [
+          {title: '1-3 Bedrooms', value: '1-3 Bedrooms'},
+          {title: '1-4 Bedrooms', value: '1-4 Bedrooms'},
+          {title: '1-6 Bedrooms', value: '1-6 Bedrooms'},
+        ],
+        layout: 'radio',
+      },
+    },
     {
       name: 'mainProjectImage',
       title: 'Main Project Image',
@@ -38,15 +49,47 @@ export default {
         hotspot: true,
       },
     },
-    // Developer
     {
       name: 'projectImages',
       title: 'Project Images',
       type: 'array',
       of: [{type: 'developmentImage'}],
     },
-    // Off-plan or Not offplan
-    // if off-plan complition date calender date Month / Year
+    {
+      // Developer
+      name: 'mainDeveloper',
+      title: 'Main Developer',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Emaar Properties', value: 'Emaar Properties'},
+          {title: 'Damac Real Estate', value: 'Damac Real Estate'},
+          {title: 'Nakheel Properties', value: 'Nakheel Properties'},
+          {title: 'Aldar Properties', value: 'Aldar Properties'},
+          {title: 'Manazel Real Estate', value: 'Manazel Real Estate'},
+          {title: 'EllingTon Properties', value: 'EllingTon Properties'},
+          {title: 'Meraas Real Estate', value: 'Meraas Real Estate'},
+        ],
+        layout: 'radio',
+      },
+    },
+    {
+      name: 'projectOffPlan',
+      title: 'Project Off Plan',
+      type: 'object',
+      fields: [
+        {
+          name: 'offplan',
+          title: 'Off-Plan',
+          type: 'boolean',
+        },
+        {
+          name: 'completionDate',
+          title: 'Completion Date',
+          type: 'string',
+        },
+      ],
+    },
     {
       name: 'totalPrice',
       title: 'Price',
@@ -70,6 +113,7 @@ export default {
           {title: 'Grocery Store', value: 'Grocery Store'},
           {title: 'Gym', value: 'Gym'},
           {title: 'Pool', value: 'Pool'},
+          {title: 'Helper Room', value: 'Helper Room'}
         ],
         layout: 'checkbox',
       },
