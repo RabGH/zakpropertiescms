@@ -113,7 +113,7 @@ export default {
           {title: 'Grocery Store', value: 'Grocery Store'},
           {title: 'Gym', value: 'Gym'},
           {title: 'Pool', value: 'Pool'},
-          {title: 'Helper Room', value: 'Helper Room'}
+          {title: 'Helper Room', value: 'Helper Room'},
         ],
         layout: 'checkbox',
       },
