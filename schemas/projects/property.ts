@@ -23,7 +23,7 @@ export default {
           {title: 'Townhouse', value: 'Townhouse'},
           {title: 'Apartment', value: 'Apartment'},
           {title: 'Penthouse', value: 'Penthouse'},
-          {title: 'Loft & Duplex', value: 'ALoft & Duplex'},
+          {title: 'Loft & Duplex', value: 'Loft & Duplex'},
           {title: 'Plot', value: 'Plot'},
         ],
         layout: 'radio',
