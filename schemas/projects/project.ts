@@ -144,7 +144,7 @@ export default {
       options: {
         list: [
           {title: 'Building', value: 'building'},
-          {title: 'Piece of Land', value: 'pieceOfLand'},
+          {title: 'Districts', value: 'pieceOfLand'}, // Change to districts
         ],
         layout: 'radio',
       },
