@@ -9,7 +9,7 @@ export default {
       type: 'string',
     },
     {
-      name: '_createdAt',
+      name: 'createdAt',
       title: 'Created At',
       type: 'datetime',
       options: {
