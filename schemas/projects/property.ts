@@ -9,6 +9,16 @@ export default {
       type: 'string',
     },
     {
+      name: '_createdAt',
+      title: 'Created At',
+      type: 'datetime',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        timeFormat: 'HH:mm:ss',
+        inputUtc: true,
+      },
+    },
+    {
       name: 'location',
       title: 'Location',
       type: 'geopoint',
