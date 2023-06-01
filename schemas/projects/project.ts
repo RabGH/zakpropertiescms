@@ -117,7 +117,12 @@ export default {
         {
           name: 'completionDate',
           title: 'Completion Date',
-          type: 'string',
+          type: 'datetime',
+          options: {
+            dateFormat: 'YYYY-MM-DD',
+            timeFormat: 'HH:mm:ss',
+            inputUtc: true,
+          },
         },
       ],
     },
@@ -125,6 +130,13 @@ export default {
       name: 'totalPrice',
       title: 'Price',
       type: 'number',
+    },
+    {
+      name: 'averagePrice',
+      title: 'Average Price',
+      type: 'array',
+      of: [{type: 'number'}],
+      description: 'Enter the minimum and maximum price in AED',
     },
     {
       name: 'address',
@@ -150,11 +162,12 @@ export default {
     {
       name: 'projectType',
       title: 'Type',
-      type: 'string',
+      type: 'array',
+      of: [{type: 'string'}],
       options: {
         list: [
           {title: 'Building', value: 'building'},
-          {title: 'Districts', value: 'pieceOfLand'}, // Change to districts
+          {title: 'Districts', value: 'districts'},
         ],
         layout: 'radio',
       },
@@ -163,19 +176,40 @@ export default {
       name: 'numFloors',
       title: 'Number of Floors',
       type: 'number',
-      hidden: ({parent}: {parent: {projectType: string}}) => parent.projectType !== 'building',
+      hidden: ({parent}: {parent: {projectType: string[]}}) =>
+        !parent.projectType.includes('building'),
     },
     {
       name: 'numUnits',
       title: 'Number of Units',
       type: 'number',
-      hidden: ({parent}: {parent: {projectType: string}}) => parent.projectType !== 'building',
+      hidden: ({parent}: {parent: {projectType: string[]}}) =>
+        !parent.projectType.includes('building'),
     },
     {
       name: 'numVillas',
       title: 'Number of Villas/Townhouses',
       type: 'number',
-      hidden: ({parent}: {parent: {projectType: string}}) => parent.projectType !== 'pieceOfLand',
+      hidden: ({parent}: {parent: {projectType: string[]}}) =>
+        !parent.projectType.includes('districts'),
+    },
+    {
+      name: 'bedrooms',
+      title: 'Bedrooms',
+      type: 'string',
+      options: {
+        list: [
+          {title: '2-3', value: '2-3'},
+          {title: '2-4', value: '2-4'},
+          {title: '3-4', value: '3-4'},
+          {title: '3-5', value: '3-5'},
+          {title: '5-6', value: '5-6'},
+          {title: '7+', value: '7+'},
+        ],
+        layout: 'radio',
+      },
+      hidden: ({parent}: {parent: {projectType: string[]}}) =>
+        !parent.projectType.includes('pieceOfLand'),
     },
     {
       name: 'bedrooms',

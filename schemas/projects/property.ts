@@ -116,7 +116,12 @@ export default {
         {
           name: 'propertyCompletionDate',
           title: 'Property Completion Date',
-          type: 'string',
+          type: 'datetime',
+          options: {
+            dateFormat: 'YYYY-MM-DD',
+            timeFormat: 'HH:mm:ss',
+            inputUtc: true,
+          },
         },
       ],
     },
