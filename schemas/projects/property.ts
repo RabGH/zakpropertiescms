@@ -87,11 +87,15 @@ export default {
       name: 'totalPrice',
       title: 'Price',
       type: 'number',
+      description:
+        'Prices can only go from 1,000,000 AED to 500,000,000 AED. Notify if there is higher.',
     },
     {
       name: 'squareFootage',
       title: 'Square Footage',
       type: 'number',
+      description:
+        'The area of the property in square feet. Range: 0 to 10000. Notify if there is higher.',
     },
     {
       name: 'plottedArea',
@@ -135,6 +139,7 @@ export default {
       name: 'bedrooms',
       title: 'Bedrooms',
       type: 'number',
+      description: 'Bedrooms can only go from 1 to 15. Notify if there is higher.',
     },
     {
       name: 'bathrooms',
