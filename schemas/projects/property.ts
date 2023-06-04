@@ -149,7 +149,7 @@ export default {
       title: 'Features',
       type: 'reference',
       to: [{type: 'features'}],
-      descriotion: 'These are the features of the property. Select and create them as bundles.',
+      description: 'These are the features of the property. Select and create them as bundles.',
     },
     {
       name: 'bedrooms',
