@@ -17,11 +17,13 @@ export default {
         timeFormat: 'HH:mm:ss',
         inputUtc: true,
       },
+      description: 'This is the date the project was added to the database.',
     },
     {
       name: 'location',
       title: 'Location',
       type: 'geopoint',
+      description: 'This is the location of the whole project. Geopoint location.',
     },
     {
       name: 'projectPropertyTypes',
@@ -103,6 +105,7 @@ export default {
         ],
         layout: 'checkbox',
       },
+      description: 'These are the types of areas the projects are located in.',
     },
     {
       name: 'projectOffPlan',
@@ -125,11 +128,14 @@ export default {
           },
         },
       ],
+      description: 'This is the completion date of the project. If it was an off-plan project.',
     },
     {
       name: 'totalPrice',
       title: 'Price',
       type: 'number',
+      description:
+        'This is the total price of the project. Either entire price or average for each property.',
     },
     {
       name: 'averagePrice',
@@ -143,21 +149,27 @@ export default {
       title: 'Address',
       type: 'reference',
       to: [{type: 'address'}],
+      description: 'This is the general address of the property.',
     },
     {
       name: 'specificAddress',
       title: 'Specific Address',
       type: 'string',
+      description: 'This is the specific address of the property.',
     },
     {
       name: 'squareFootage',
       title: 'Square Footage',
       type: 'number',
+      description:
+        'This is the square footage of the project. Either entire Square Footage or average for each property.',
     },
     {
       name: 'projectBuiltUpArea',
       title: 'Built-up Area',
       type: 'number',
+      description:
+        'This is the built-up area of the project. Either entire built-up area or average for each property.',
     },
     {
       name: 'projectType',
@@ -171,6 +183,8 @@ export default {
         ],
         layout: 'radio',
       },
+      description:
+        'These are the types of properties in a project. Building will have number of floors and units. Districts will have number of villas/townhouses.',
     },
     {
       name: 'numFloors',
@@ -178,6 +192,7 @@ export default {
       type: 'number',
       hidden: ({parent}: {parent: {projectType: string[]}}) =>
         !parent.projectType.includes('building'),
+      description: 'It indicates the number of floors in the building.',
     },
     {
       name: 'numUnits',
@@ -185,13 +200,15 @@ export default {
       type: 'number',
       hidden: ({parent}: {parent: {projectType: string[]}}) =>
         !parent.projectType.includes('building'),
+      description: 'It indicates the number of units in the building.',
     },
     {
-      name: 'numVillas',
+      name: 'numOfHouses',
       title: 'Number of Villas/Townhouses',
       type: 'number',
       hidden: ({parent}: {parent: {projectType: string[]}}) =>
         !parent.projectType.includes('districts'),
+      description: 'It indicates the number of villas or townhouses in the district.',
     },
     {
       name: 'bedrooms',
@@ -208,42 +225,28 @@ export default {
         ],
         layout: 'radio',
       },
-      hidden: ({parent}: {parent: {projectType: string[]}}) =>
-        !parent.projectType.includes('pieceOfLand'),
-    },
-    {
-      name: 'bedrooms',
-      title: 'Bedrooms',
-      type: 'string',
-      options: {
-        list: [
-          {title: '2-3', value: '2-3'},
-          {title: '2-4', value: '2-4'},
-          {title: '3-4', value: '3-4'},
-          {title: '3-5', value: '3-5'},
-          {title: '5-6', value: '5-6'},
-          {title: '7+', value: '7+'},
-        ],
-        layout: 'radio',
-      },
-      hidden: ({parent}: {parent: {projectType: string}}) => parent.projectType !== 'pieceOfLand',
+      description: 'This is the number of average bedrooms in the projects properties.',
     },
     {
       name: 'amenities',
       title: 'Amenities',
       type: 'reference',
       to: [{type: 'amenities'}],
+      description: 'These are the amenities in the project. Select and create them as bundles.',
     },
     {
       name: 'properties',
       title: 'Properties',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'property'}]}],
+      description:
+        'These are the properties in/or associated the project. Select and/or create them.',
     },
     {
       name: 'description',
       title: 'Description',
       type: 'string',
+      description: 'This is the description of the project.',
     },
     {
       name: 'slug',
@@ -253,11 +256,14 @@ export default {
         source: 'title',
         maxLength: 100,
       },
+      description: 'This is the slug of the project. IMPORTANT TO GENERATE THE SLUG.',
     },
     {
       name: 'id',
       title: 'ID',
       type: 'string',
+      description:
+        'This is the ID of the project. IMPORTANT TO SET THE ID. Make sure to name IDs for project in an organized manner. D01 D02 D03, D is for Development IDs',
     },
   ],
 }
