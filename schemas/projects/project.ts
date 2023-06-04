@@ -120,7 +120,7 @@ export default {
         {
           name: 'completionDate',
           title: 'Completion Date',
-          type: 'datetime',
+          type: 'date',
           options: {
             dateFormat: 'YYYY-MM-DD',
           },
