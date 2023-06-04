@@ -137,8 +137,6 @@ export default {
           type: 'datetime',
           options: {
             dateFormat: 'YYYY-MM-DD',
-            timeFormat: 'HH:mm:ss',
-            inputUtc: true,
           },
         },
       ],
