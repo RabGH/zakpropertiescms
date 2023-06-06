@@ -140,19 +140,12 @@ export default {
       description: 'This is the specific address of the property.',
     },
     {
-      name: 'squareFootage',
-      title: 'Square Footage',
-      type: 'number',
-      description:
-        'This is the square footage of the project. Either entire Square Footage or average for each property.',
-    },
-    {
       name: 'projectBuiltUpArea',
       title: 'Built-up Area',
       type: 'array',
       of: [{type: 'number'}],
       description:
-        'This is the built-up area of the project. Either entire built-up area or average for each property.',
+        'This is the built-up area of the project. Either entire built-up area or average for each property. Square Footage',
     },
     {
       name: 'projectType',
