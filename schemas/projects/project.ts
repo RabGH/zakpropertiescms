@@ -172,8 +172,7 @@ export default {
     {
       name: 'projectType',
       title: 'Type',
-      type: 'array',
-      of: [{type: 'string'}],
+      type: 'string',
       options: {
         list: [
           {title: 'Building', value: 'building'},
@@ -188,24 +187,18 @@ export default {
       name: 'numFloors',
       title: 'Number of Floors',
       type: 'number',
-      hidden: ({parent}: {parent: {projectType: string[]}}) =>
-        !parent.projectType.includes('building'),
       description: 'It indicates the number of floors in the building.',
     },
     {
       name: 'numUnits',
       title: 'Number of Units',
       type: 'number',
-      hidden: ({parent}: {parent: {projectType: string[]}}) =>
-        !parent.projectType.includes('building'),
       description: 'It indicates the number of units in the building.',
     },
     {
       name: 'numOfHouses',
       title: 'Number of Villas/Townhouses',
       type: 'number',
-      hidden: ({parent}: {parent: {projectType: string[]}}) =>
-        !parent.projectType.includes('districts'),
       description: 'It indicates the number of villas or townhouses in the district.',
     },
     {
