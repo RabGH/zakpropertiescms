@@ -214,13 +214,13 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'text',
       description: 'This is the description of the project.',
     },
     {
       name: 'presentation',
       title: 'Presentation',
-      type: 'string',
+      type: 'text',
       description: 'This is the presentation of the project. Be detailed here.',
     },
     {

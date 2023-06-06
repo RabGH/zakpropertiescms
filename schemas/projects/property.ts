@@ -165,7 +165,7 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'text',
       description: 'This is the description of the property.',
     },
     {
