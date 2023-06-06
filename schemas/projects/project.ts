@@ -39,22 +39,6 @@ export default {
         layout: 'checkbox',
       },
     },
-    // {
-    //   name: 'unitType',
-    //   title: 'Unit Type',
-    //   type: 'string',
-    //   options: {
-    //     list: [
-    //       {title: '2-3 Bedrooms', value: '2-3 Bedrooms'},
-    //       {title: '2-4 Bedrooms', value: '2-4 Bedrooms'},
-    //       {title: '3-4 Bedrooms', value: '3-4 Bedrooms'},
-    //       {title: '3-5 Bedrooms', value: '3-5 Bedrooms'},
-    //       {title: '5-6 Bedrooms', value: '5-6 Bedrooms'},
-    //       {title: '7+ Bedrooms', value: '7+ Bedrooms'},
-    //     ],
-    //     layout: 'radio',
-    //   },
-    // },
     {
       name: 'mainProjectImage',
       title: 'Main Project Image',
@@ -165,7 +149,8 @@ export default {
     {
       name: 'projectBuiltUpArea',
       title: 'Built-up Area',
-      type: 'number',
+      type: 'array',
+      of: [{type: 'number'}],
       description:
         'This is the built-up area of the project. Either entire built-up area or average for each property.',
     },
