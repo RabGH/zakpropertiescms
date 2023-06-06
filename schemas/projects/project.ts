@@ -149,7 +149,7 @@ export default {
     },
     {
       name: 'projectType',
-      title: 'Type',
+      title: 'Project Type',
       type: 'string',
       options: {
         list: [
