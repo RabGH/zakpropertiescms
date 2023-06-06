@@ -218,6 +218,12 @@ export default {
       description: 'This is the description of the project.',
     },
     {
+      name: 'presentation',
+      title: 'Presentation',
+      type: 'string',
+      description: 'This is the presentation of the project. Be detailed here.',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
