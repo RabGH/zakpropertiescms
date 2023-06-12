@@ -10,6 +10,9 @@ export default {
       options: {
         inHightLight: true,
       },
+      initialValue: () => {
+        return 'UAEZakPropertiesImage'
+      },
     },
   ],
   options: {
