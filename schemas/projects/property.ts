@@ -45,7 +45,7 @@ export default {
       of: [{type: 'string'}],
       options: {
         list: [
-          {title: 'Urban Living', value: 'Urbran Living'},
+          {title: 'Urban Living', value: 'Urban Living'},
           {title: 'Beachfront property', value: 'Beachfront property'},
           {title: 'Golf-side villa', value: 'Golf-side villa'},
           {title: 'Lakeside home', value: 'Lakeside home'},
