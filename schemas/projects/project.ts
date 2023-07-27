@@ -72,6 +72,7 @@ export default {
           {title: 'Tilal Al Ghaf', value: 'Tilal Al Ghaf'},
           {title: 'Dubai Properties', value: 'Dubai Properties'},
           {title: 'Omniyat', value: 'Omniyat'},
+          {title: 'Arada Developments', value: 'Arada Developments'},
         ],
         layout: 'radio',
       },
