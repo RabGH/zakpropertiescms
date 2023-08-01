@@ -143,11 +143,12 @@ export default {
       description: 'This is the completion date of the property, if it was an offplan property.',
     },
     {
-      name: 'features',
-      title: 'Features',
+      name: 'amenities',
+      title: 'Amenities',
       type: 'reference',
-      to: [{type: 'features'}],
-      description: 'These are the features of the property. Select and create them as bundles.',
+      to: [{type: 'amenities'}],
+      description:
+        'These are the amenities in the property/project. Select and create them as bundles.',
     },
     {
       name: 'bedrooms',
@@ -175,6 +176,12 @@ export default {
       to: [{type: 'projects'}],
       weak: true,
       description: 'This is the project the property is in.',
+    },
+    {
+      name: 'paymentPlan',
+      title: 'Payment Plan',
+      type: 'reference',
+      to: [{type: 'paymentPlans'}],
     },
     {
       name: 'slug',
