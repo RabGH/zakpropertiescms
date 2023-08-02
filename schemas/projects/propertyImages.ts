@@ -1,6 +1,6 @@
 export default {
-  name: 'projectImages',
-  title: 'Project Images',
+  name: 'propertyImage',
+  title: 'Property Image',
   type: 'image',
   fields: [
     {

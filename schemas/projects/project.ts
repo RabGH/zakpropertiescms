@@ -51,9 +51,8 @@ export default {
       name: 'projectImages',
       title: 'Project Images',
       type: 'array',
-      of: [{type: 'developmentImage'}],
+      of: [{type: 'projectImages'}],
     },
-    // remove main developer
     {
       name: 'developer',
       title: 'Developer',
@@ -61,30 +60,6 @@ export default {
       to: [{type: 'developer'}],
       description: 'This is the developer associated with the project.',
     },
-    // {
-    //   name: 'mainDeveloper',
-    //   title: 'Main Developer',
-    //   type: 'string',
-    //   options: {
-    //     list: [
-    //       {title: 'Emaar Properties', value: 'Emaar Properties'},
-    //       {title: 'Damac Properties', value: 'Damac Properties'},
-    //       {title: 'Nakheel Properties', value: 'Nakheel Properties'},
-    //       {title: 'Aldar', value: 'Aldar'},
-    //       {title: 'Azizi', value: 'Azizi'},
-    //       {title: 'Ellington Properties', value: 'Ellington Properties'},
-    //       {title: 'Meraas', value: 'Meraas'},
-    //       {title: 'Wasl', value: 'Wasl'},
-    //       {title: 'Jumeirah Golf Estates', value: 'Jumeirah Golf Estates'},
-    //       {title: 'Sobha Realty', value: 'Sobha Realty'},
-    //       {title: 'Tilal Al Ghaf', value: 'Tilal Al Ghaf'},
-    //       {title: 'Dubai Properties', value: 'Dubai Properties'},
-    //       {title: 'Omniyat', value: 'Omniyat'},
-    //       {title: 'Arada Developments', value: 'Arada Developments'},
-    //     ],
-    //     layout: 'radio',
-    //   },
-    // },
     {
       name: 'areaType',
       title: 'Area Type',
@@ -106,27 +81,6 @@ export default {
       description: 'These are the types of areas the projects are located in.',
     },
     {
-      name: 'projectOffPlan',
-      title: 'Project Off Plan',
-      type: 'object',
-      fields: [
-        {
-          name: 'offplan',
-          title: 'Off-Plan',
-          type: 'boolean',
-        },
-        {
-          name: 'completionDate',
-          title: 'Completion Date',
-          type: 'date',
-          options: {
-            dateFormat: 'YYYY-MM-DD',
-          },
-        },
-      ],
-      description: 'This is the completion date of the project. If it was an off-plan project.',
-    },
-    {
       name: 'totalPrice',
       title: 'Price',
       type: 'number',
@@ -145,13 +99,13 @@ export default {
       title: 'Address',
       type: 'reference',
       to: [{type: 'address'}],
-      description: 'This is the general address of the property.',
+      description: 'This is the general address of the properties in the project.',
     },
     {
       name: 'specificAddress',
       title: 'Specific Address',
       type: 'string',
-      description: 'This is the specific address of the property.',
+      description: 'This is the specific address of the project, leave this blank if address is enough to describe the properties locations.',
     },
     {
       name: 'projectBuiltUpArea',
@@ -159,7 +113,7 @@ export default {
       type: 'array',
       of: [{type: 'number'}],
       description:
-        'This is the built-up area of the project. Either entire built-up area or average for each property. Square Footage',
+        'This is the built-up area average for each property in the project. Square Footage',
     },
     {
       name: 'projectType',
@@ -225,14 +179,6 @@ export default {
         'These are the amenities in the property/project. Select and create them as bundles.',
     },
     {
-      name: 'properties',
-      title: 'Properties',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'property'}]}],
-      description:
-        'These are the properties in/or associated the project. Select and/or create them.',
-    },
-    {
       name: 'description',
       title: 'Description',
       type: 'text',
@@ -245,6 +191,83 @@ export default {
       description: 'This is the presentation of the project. Be detailed here.',
     },
     {
+      name: 'projectOffPlan',
+      title: 'Project Off Plan',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'offplan',
+              title: 'Off-Plan',
+              type: 'boolean',
+            },
+            {
+              name: 'completionDate',
+              title: 'Completion Date',
+              type: 'date',
+              options: {
+                dateFormat: 'YYYY-MM-DD',
+              },
+            },
+            {
+              name: 'properties',
+              title: 'Properties',
+              type: 'array',
+              of: [{type: 'reference', to: [{type: 'property'}]}],
+              description: 'These are the properties that belong to this offplan status.',
+            },
+          ],
+        },
+      ],
+      description:
+        'This is the offplan status and completion date of the project for each group of properties.',
+    },
+    {
+      name: 'projectReadyToBuy',
+      title: 'Project Ready To Buy',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'offplan',
+              title: 'Off-Plan',
+              type: 'boolean',
+              hidden: true,
+            },
+            {
+              name: 'completionDate',
+              title: 'Completion Date',
+              type: 'date',
+              options: {
+                dateFormat: 'YYYY-MM-DD',
+              },
+              hidden: true,
+            },
+            {
+              name: 'properties',
+              title: 'Properties',
+              type: 'array',
+              of: [{type: 'reference', to: [{type: 'property'}]}],
+              description: 'These are the properties that belong to this ready to buy status.',
+            },
+          ],
+        },
+      ],
+      description: 'This is the ready to buy status of the project for each group of properties.',
+    },
+    {
+      name: 'paymentPlans',
+      title: 'Payment Plans',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'paymentPlans'}]}],
+      description:
+        'These are the payment plans available for the project. Select and/or create them.',
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -252,7 +275,7 @@ export default {
         source: 'title',
         maxLength: 100,
       },
-      description: 'This is the slug of the project. IMPORTANT TO GENERATE THE SLUG.',
+      description: 'This is the slug of the project. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
     },
     {
       name: 'id',

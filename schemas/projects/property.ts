@@ -191,7 +191,7 @@ export default {
         source: 'title',
         maxLength: 100,
       },
-      description: 'This is the slug of the property. IMPORTANT TO GENERATE THE SLUG.',
+      description: 'This is the slug of the property. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
     },
     {
       name: 'id',
