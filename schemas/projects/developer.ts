@@ -7,11 +7,56 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
+      description: 'This is the name of the developer.',
+    },
+    {
+      name: 'createdAt',
+      title: 'Created At',
+      type: 'datetime',
+      options: {
+        dateFormat: 'YYYY-MM-DD',
+        timeFormat: 'HH:mm:ss',
+        inputUtc: true,
+      },
+      description: 'This is the date the developer was added to the database.',
+    },
+    {
+      name: 'logo',
+      title: 'Logo',
+      type: 'image',
+      description: 'This is the logo image of the developer.',
+    },
+    {
+      name: 'mainDeveloperImage',
+      title: 'Main Developer Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'developerImages',
+      title: 'Developer Images',
+      type: 'array',
+      of: [{type: 'developerImage'}],
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      description: 'This is a brief introduction of the developer.',
+    },
+    {
+      name: 'website',
+      title: 'Website',
+      type: 'string',
+      description: 'This is the URL of the developers official website.',
     },
     {
       name: 'averagePricing',
       title: 'Average Pricing',
-      type: 'number',
+      type: 'array',
+      of: [{type: 'number'}],
       description: 'The average pricing for all projects of the developer.',
     },
     {
@@ -19,8 +64,7 @@ export default {
       title: 'Built-up Area',
       type: 'array',
       of: [{type: 'number'}],
-      description:
-        'This is the built-up area of the developers projects. Either entire built-up area or average for each project in square footage',
+      description: 'This is the average built-up areas of the developers projects.',
     },
     {
       name: 'addresses',
@@ -48,7 +92,7 @@ export default {
       name: 'projects',
       title: 'Projects',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'project'}]}],
+      of: [{type: 'reference', to: [{type: 'projects'}]}],
       description:
         'These are the projects associated with the developer. Select and/or create them.',
     },
@@ -71,6 +115,32 @@ export default {
         layout: 'checkbox',
       },
       description: 'These are the types of areas the developer deals with.',
+    },
+    // {
+    //   name: 'amenitiesBundle',
+    //   title: 'Amenities Bundle',
+    //   type: 'array',
+    //   of: [{type: 'reference', to: [{type: 'amenities'}]}],
+    //   description:
+    //     'These are the amenities associated with the developer and its projects. Select and/or create them.',
+    // },
+    {
+      name: 'slug',
+      title: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 100,
+      },
+      description:
+        'This is the slug of the developer. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
+    },
+    {
+      name: 'id',
+      title: 'ID',
+      type: 'string',
+      description:
+        'This is the ID of the developer. IMPORTANT TO SET THE ID. Make sure to name IDs for developers in an organized manner. D01 D02 D03, D is for Developer IDs',
     },
   ],
 }
