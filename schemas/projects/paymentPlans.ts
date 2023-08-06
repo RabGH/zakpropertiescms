@@ -28,13 +28,19 @@ export default {
         list: [
           {title: 'Down Payment Plan', value: 'Down Payment Plan'},
           {title: 'Construction Linked Payment Plan', value: 'CLP Plan'},
-          {title: 'Flexi Payment Plan', value: 'Flexi Payment Plan'},
-          {title: 'Possession Linked Payment Plan', value: 'PLP Plan'},
+          {title: 'Flexible Payment Plan', value: 'Flexible Payment Plan'},
           {title: 'Post Handover Payment Plan', value: 'Post Handover Payment Plan'},
+          {title: 'Other', value: 'Other'},
         ],
         layout: 'radio',
       },
       description: 'The type of the payment plan, e.g. "CLP Plan".',
+    },
+    {
+      name: 'customType',
+      title: 'Custom Payment Plan Type',
+      type: 'string',
+      hidden: ({document}: {document: {type?: string}}) => document.type !== 'Other',
     },
     {
       name: 'reference',

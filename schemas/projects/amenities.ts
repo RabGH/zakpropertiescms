@@ -9,17 +9,6 @@ export default {
       type: 'string',
     },
     {
-      name: 'createdAt',
-      title: 'Created At',
-      type: 'datetime',
-      options: {
-        dateFormat: 'YYYY-MM-DD',
-        timeFormat: 'HH:mm:ss',
-        inputUtc: true,
-      },
-      description: 'This is the date the amenity bundle was added to the database.',
-    },
-    {
       name: 'amenities',
       title: 'Amenity Types',
       type: 'array',
@@ -135,12 +124,6 @@ export default {
         ],
         layout: 'checkbox',
       },
-    },
-    {
-      name: 'reference',
-      title: 'Amenities Reference',
-      type: 'string',
-      description: 'The reference number or ID of the amenities bundle, e.g. "AW-001" AW-Amenities Wasl .',
     },
   ],
 }

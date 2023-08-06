@@ -116,14 +116,6 @@ export default {
       },
       description: 'These are the types of areas the developer deals with.',
     },
-    // {
-    //   name: 'amenitiesBundle',
-    //   title: 'Amenities Bundle',
-    //   type: 'array',
-    //   of: [{type: 'reference', to: [{type: 'amenities'}]}],
-    //   description:
-    //     'These are the amenities associated with the developer and its projects. Select and/or create them.',
-    // },
     {
       name: 'slug',
       title: 'slug',
