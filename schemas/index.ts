@@ -5,7 +5,7 @@ import projectImage from './projects/projectImages'
 import address from './projects/address'
 import amenities from './projects/amenities'
 import developer from './projects/developer'
-import paymentPlans from './projects/paymentPlans'
+import paymentPlans from './projects/paymentPlan'
 import developerImages from './projects/developerImages'
 
 export const schemaTypes = [

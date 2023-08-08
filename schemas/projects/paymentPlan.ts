@@ -1,6 +1,6 @@
 export default {
-  name: 'paymentPlans',
-  title: 'Payment Plans',
+  name: 'paymentPlan',
+  title: 'Payment Plan',
   type: 'document',
   fields: [
     {

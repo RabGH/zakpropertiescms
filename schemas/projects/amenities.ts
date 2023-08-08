@@ -92,7 +92,6 @@ export default {
           {title: 'Gymnasium', value: 'Gymnasium'},
           {title: 'Pool', value: 'Pool'},
           {title: 'Helper Room', value: 'Helper Room'},
-          {title: 'Maids Room', value: 'Maids Room'},
           {title: 'High-speed Internet', value: 'High-speed Internet'},
           {title: 'Reception Service', value: 'Reception Service'},
           {title: 'Concierge Service', value: 'Concierge Service'},
