@@ -80,7 +80,6 @@ export default {
       of: [{type: 'reference', to: [{type: 'project'}]}],
       description: 'These are the projects that belong to the ready to buy status.',
     },
-
     {
       name: 'developmentAveragePrice',
       title: 'Average Price',
