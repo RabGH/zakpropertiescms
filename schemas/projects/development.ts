@@ -60,7 +60,7 @@ export default {
       of: [{type: 'developmentImages'}],
     },
     {
-      name: 'developer',
+      name: 'developmentsDeveloper',
       title: 'Developer',
       type: 'reference',
       to: [{type: 'developer'}],
@@ -135,13 +135,6 @@ export default {
       },
       description:
         'This is the slug of the development. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
-    },
-    {
-      name: 'id',
-      title: 'ID',
-      type: 'string',
-      description:
-        'This is the ID of the development. IMPORTANT TO SET THE ID. Make sure to name IDs for development in an organized manner. D01 D02 D03, D is for Development IDs',
     },
   ],
 }
