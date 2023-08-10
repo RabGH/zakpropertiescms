@@ -53,7 +53,7 @@ export default {
       description: 'This is the URL of the developers official website.',
     },
     {
-      name: 'developments',
+      name: 'developerDevelopments',
       title: 'Developers Developments',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'development'}]}],
@@ -69,13 +69,6 @@ export default {
       },
       description:
         'This is the slug of the developer. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
-    },
-    {
-      name: 'id',
-      title: 'ID',
-      type: 'string',
-      description:
-        'This is the ID of the developer. IMPORTANT TO SET THE ID. Make sure to name IDs for developers in an organized manner. D01 D02 D03, D is for Developer IDs',
     },
   ],
 }

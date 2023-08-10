@@ -198,49 +198,25 @@ export default {
       description: 'This is the presentation of the project. Be detailed here.',
     },
     {
-      name: 'development',
-      title: 'Development',
+      name: 'projectDevelopment',
+      title: 'Projects Development',
       type: 'reference',
       to: [{type: 'development'}],
       description: 'This is the development associated with the project.',
     },
     {
-      name: 'projectOffPlan',
-      title: 'Project Off Plan',
+      name: 'propertiesOffPlan',
+      title: 'Off Plan Properties',
       type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'properties',
-              title: 'Properties',
-              type: 'array',
-              of: [{type: 'reference', to: [{type: 'property'}]}],
-              description: 'These are the properties that belong to this offplan status.',
-            },
-          ],
-        },
-      ],
+      of: [{type: 'reference', to: [{type: 'property'}]}],
+      description: 'These are the properties that belong to the offplan status.',
     },
     {
-      name: 'projectReadyToBuy',
-      title: 'Project Ready To Buy',
+      name: 'propertiesReadyToBuy',
+      title: 'Ready To Buy Properties',
       type: 'array',
-      of: [
-        {
-          type: 'object',
-          fields: [
-            {
-              name: 'properties',
-              title: 'Properties',
-              type: 'array',
-              of: [{type: 'reference', to: [{type: 'property'}]}],
-              description: 'These are the properties that belong to this ready to buy status.',
-            },
-          ],
-        },
-      ],
+      of: [{type: 'reference', to: [{type: 'property'}]}],
+      description: 'These are the properties that belong to the ready to buy status.',
     },
     {
       name: 'paymentPlans',
@@ -260,13 +236,6 @@ export default {
       },
       description:
         'This is the slug of the project. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
-    },
-    {
-      name: 'id',
-      title: 'ID',
-      type: 'string',
-      description:
-        'This is the ID of the project. IMPORTANT TO SET THE ID. Make sure to name IDs for project in an organized manner. D01 D02 D03, D is for Development IDs',
     },
   ],
 }

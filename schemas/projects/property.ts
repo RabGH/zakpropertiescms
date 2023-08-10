@@ -187,12 +187,5 @@ export default {
       description:
         'This is the slug of the property. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
     },
-    {
-      name: 'id',
-      title: 'ID',
-      type: 'string',
-      description:
-        'This is the ID of the property. IMPORTANT TO SET THE ID. Make sure to name IDs for properties in an organized manner. P01 P02 P03, P is for Property IDs',
-    },
   ],
 }
