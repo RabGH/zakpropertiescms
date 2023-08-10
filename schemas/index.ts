@@ -1,21 +1,29 @@
-import property from './projects/property'
-import propertyImage from './projects/propertyImages'
-import project from './projects/project'
-import projectImage from './projects/projectImages'
-import address from './projects/address'
-import amenities from './projects/amenities'
 import developer from './projects/developer'
-import paymentPlans from './projects/paymentPlan'
 import developerImages from './projects/developerImages'
+import development from './projects/development'
+import developmentAmenities from './projects/developmentAmenities'
+import developmentImages from './projects/developmentImages'
+import project from './projects/project'
+import projectAmenities from './projects/projectAmenities'
+import projectImage from './projects/projectImages'
+import property from './projects/property'
+import propertyAmenities from './projects/propertyAmenities'
+import propertyImage from './projects/propertyImages'
+import address from './projects/address'
+import paymentPlan from './projects/paymentPlan'
 
 export const schemaTypes = [
-  property,
-  propertyImage,
-  project,
-  projectImage,
   developer,
   developerImages,
+  development,
+  developmentAmenities,
+  developmentImages,
+  project,
+  projectAmenities,
+  projectImage,
+  property,
+  propertyAmenities,
+  propertyImage,
   address,
-  amenities,
-  paymentPlans,
+  paymentPlan,
 ]

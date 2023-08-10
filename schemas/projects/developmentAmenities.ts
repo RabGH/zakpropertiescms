@@ -1,6 +1,6 @@
 export default {
-  name: 'amenities',
-  title: 'Amenities',
+  name: 'developmentAmenities',
+  title: 'Development Amenities',
   type: 'document',
   fields: [
     {
@@ -9,8 +9,8 @@ export default {
       type: 'string',
     },
     {
-      name: 'amenities',
-      title: 'Amenity Types',
+      name: 'developmentsAmenities',
+      title: 'Development Amenity Types',
       type: 'array',
       of: [{type: 'string'}],
       options: {

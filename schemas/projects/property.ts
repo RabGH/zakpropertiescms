@@ -39,8 +39,8 @@ export default {
       description: 'This is the specific address of the property.',
     },
     {
-      name: 'areaType',
-      title: 'Area Type',
+      name: 'propertyAreaTypes',
+      title: 'Property Area Types',
       type: 'array',
       of: [{type: 'string'}],
       options: {
@@ -101,11 +101,11 @@ export default {
         'Prices can only go from 1,000,000 AED to 500,000,000 AED. Notify if there is higher or lower.',
     },
     {
-      name: 'squareFootage',
-      title: 'Square Footage',
+      name: 'builtUpArea',
+      title: 'Built Up Area',
       type: 'number',
       description:
-        'The area of the property in square feet. Range: 0 to 10000. Notify if there is higher.',
+        'The area of the built property in square feet, this will be mainly used for ALL PROPERTIES! Range: 0 to 10000. Notify if there is higher.',
     },
     {
       name: 'plottedArea',
@@ -113,13 +113,6 @@ export default {
       type: 'number',
       description:
         'The entire plotted area of the property in square feet. Range: 0 to 10000. Notify if there is higher.',
-    },
-    {
-      name: 'builtUpArea',
-      title: 'Built Up Area',
-      type: 'number',
-      description:
-        'The area of the built property in square feet. Range: 0 to 10000. Notify if there is higher.',
     },
     {
       name: 'propertyOffPlan',
@@ -143,10 +136,10 @@ export default {
       description: 'This is the completion date of the property, if it was an offplan property.',
     },
     {
-      name: 'amenities',
-      title: 'Amenities',
+      name: 'propertiesAmenities',
+      title: 'Property Amenities',
       type: 'reference',
-      to: [{type: 'amenities'}],
+      to: [{type: 'propertyAmenities'}],
       description:
         'These are the amenities in the property/project. Select and create them as bundles.',
     },
@@ -173,7 +166,7 @@ export default {
       name: 'projectId',
       title: 'Project ID',
       type: 'reference',
-      to: [{type: 'projects'}],
+      to: [{type: 'project'}],
       weak: true,
       description: 'This is the project the property is in.',
     },
@@ -181,7 +174,7 @@ export default {
       name: 'paymentPlan',
       title: 'Payment Plan',
       type: 'reference',
-      to: [{type: 'paymentPlans'}],
+      to: [{type: 'paymentPlan'}],
     },
     {
       name: 'slug',
@@ -191,7 +184,8 @@ export default {
         source: 'title',
         maxLength: 100,
       },
-      description: 'This is the slug of the property. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
+      description:
+        'This is the slug of the property. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
     },
     {
       name: 'id',

@@ -1,12 +1,21 @@
 export default {
-  name: 'projects',
-  title: 'Projects',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string',
+      description:
+        'This is the title of the project, this shows on top of the image on the home page header.',
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      description:
+        'This is the description of the project. Keep it short and sweet. Shows on the home page.',
     },
     {
       name: 'createdAt',
@@ -54,15 +63,15 @@ export default {
       of: [{type: 'projectImages'}],
     },
     {
-      name: 'developer',
-      title: 'Developer',
+      name: 'projectDeveloper',
+      title: 'Projects Developer',
       type: 'reference',
       to: [{type: 'developer'}],
       description: 'This is the developer associated with the project.',
     },
     {
-      name: 'areaType',
-      title: 'Area Type',
+      name: 'projectAreaTypes',
+      title: 'Project Area Types',
       type: 'array',
       of: [{type: 'string'}],
       options: {
@@ -105,7 +114,8 @@ export default {
       name: 'specificAddress',
       title: 'Specific Address',
       type: 'string',
-      description: 'This is the specific address of the project, leave this blank if address is enough to describe the properties locations.',
+      description:
+        'This is the specific address of the project, leave this blank if address is enough to describe the properties locations.',
     },
     {
       name: 'projectBuiltUpArea',
@@ -150,7 +160,8 @@ export default {
     {
       name: 'bedrooms',
       title: 'Bedrooms',
-      type: 'string',
+      type: 'array',
+      of: [{type: 'string'}],
       options: {
         list: [
           {title: '1-1', value: '1-1'},
@@ -163,32 +174,35 @@ export default {
           {title: '2-4', value: '2-4'},
           {title: '3-4', value: '3-4'},
           {title: '3-5', value: '3-5'},
+          {title: '3-6', value: '3-6'},
           {title: '5-6', value: '5-6'},
           {title: '7+', value: '7+'},
         ],
-        layout: 'radio',
+        layout: 'checkbox',
       },
-      description: 'This is the number of average bedrooms in the projects properties.',
+      description:
+        'This is the number of average bedrooms in the projects properties. Multiple can be selected.',
     },
     {
-      name: 'amenities',
-      title: 'Amenities',
+      name: 'projectsAmenities',
+      title: 'Project Amenities',
       type: 'reference',
-      to: [{type: 'amenities'}],
+      to: [{type: 'projectAmenities'}],
       description:
         'These are the amenities in the property/project. Select and create them as bundles.',
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      description: 'This is the description of the project.',
     },
     {
       name: 'presentation',
       title: 'Presentation',
       type: 'text',
       description: 'This is the presentation of the project. Be detailed here.',
+    },
+    {
+      name: 'development',
+      title: 'Development',
+      type: 'reference',
+      to: [{type: 'development'}],
+      description: 'This is the development associated with the project.',
     },
     {
       name: 'projectOffPlan',
@@ -199,19 +213,6 @@ export default {
           type: 'object',
           fields: [
             {
-              name: 'offplan',
-              title: 'Off-Plan',
-              type: 'boolean',
-            },
-            {
-              name: 'completionDate',
-              title: 'Completion Date',
-              type: 'date',
-              options: {
-                dateFormat: 'YYYY-MM-DD',
-              },
-            },
-            {
               name: 'properties',
               title: 'Properties',
               type: 'array',
@@ -221,8 +222,6 @@ export default {
           ],
         },
       ],
-      description:
-        'This is the offplan status and completion date of the project for each group of properties.',
     },
     {
       name: 'projectReadyToBuy',
@@ -233,21 +232,6 @@ export default {
           type: 'object',
           fields: [
             {
-              name: 'offplan',
-              title: 'Off-Plan',
-              type: 'boolean',
-              hidden: true,
-            },
-            {
-              name: 'completionDate',
-              title: 'Completion Date',
-              type: 'date',
-              options: {
-                dateFormat: 'YYYY-MM-DD',
-              },
-              hidden: true,
-            },
-            {
               name: 'properties',
               title: 'Properties',
               type: 'array',
@@ -257,13 +241,12 @@ export default {
           ],
         },
       ],
-      description: 'This is the ready to buy status of the project for each group of properties.',
     },
     {
       name: 'paymentPlans',
       title: 'Payment Plans',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'paymentPlans'}]}],
+      of: [{type: 'reference', to: [{type: 'paymentPlan'}]}],
       description:
         'These are the payment plans available for the project. Select and/or create them.',
     },
@@ -275,7 +258,8 @@ export default {
         source: 'title',
         maxLength: 100,
       },
-      description: 'This is the slug of the project. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
+      description:
+        'This is the slug of the project. IMPORTANT TO GENERATE THE SLUG, CLICK THE GENERATE BUTTON.',
     },
     {
       name: 'id',
