@@ -112,7 +112,7 @@ export default {
         'These are the bullet points of the development. E.g.: Closests schools, hospitals, airport, metro etc... short points.',
     },
     {
-      name: 'developmentsAmenities',
+      name: 'developmentAmenities',
       title: 'Development Amenities',
       type: 'reference',
       to: [{type: 'developmentAmenities'}],

@@ -184,7 +184,7 @@ export default {
         'This is the number of average bedrooms in the projects properties. Multiple can be selected.',
     },
     {
-      name: 'projectsAmenities',
+      name: 'projectAmenities',
       title: 'Project Amenities',
       type: 'reference',
       to: [{type: 'projectAmenities'}],

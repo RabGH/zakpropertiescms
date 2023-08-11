@@ -136,7 +136,7 @@ export default {
       description: 'This is the completion date of the property, if it was an offplan property.',
     },
     {
-      name: 'propertiesAmenities',
+      name: 'propertyAmenities',
       title: 'Property Amenities',
       type: 'reference',
       to: [{type: 'propertyAmenities'}],
