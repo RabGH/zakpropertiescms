@@ -205,6 +205,20 @@ export default {
       description: 'This is the development associated with the project.',
     },
     {
+      name: 'projectStatus',
+      title: 'Project Status',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Offplan', value: 'offplan'},
+          {title: 'Ready', value: 'ready'},
+          {title: 'Hybrid', value: 'hybrid'},
+        ],
+        layout: 'radio',
+      },
+      description: 'This indicates whether the project is offplan, ready, or both.',
+    },
+    {
       name: 'propertiesOffPlan',
       title: 'Off Plan Properties',
       type: 'array',

@@ -123,6 +123,7 @@ export default {
           name: 'offplan',
           title: 'Off-Plan',
           type: 'boolean',
+          description: 'This is the offplan status of the property.',
         },
         {
           name: 'propertyCompletionDate',
@@ -131,9 +132,11 @@ export default {
           options: {
             dateFormat: 'YYYY-MM-DD',
           },
+          description:
+            'This is the completion date of the property, if it was an offplan property.',
         },
       ],
-      description: 'This is the completion date of the property, if it was an offplan property.',
+      description: 'This is to determine if the property is offplan, completion date is optional.',
     },
     {
       name: 'propertyAmenities',
