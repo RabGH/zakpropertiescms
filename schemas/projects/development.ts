@@ -67,18 +67,12 @@ export default {
       description: 'This is the developer associated with the development.',
     },
     {
-      name: 'offplanProjects',
-      title: 'Off Plan Projects',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'project'}]}],
-      description: 'These are the projects that belong to the offplan status.',
-    },
-    {
-      name: 'readyProjects',
-      title: 'Ready Projects',
+      name: 'developmentProjects',
+      title: 'Projects',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'projects'}]}],
-      description: 'These are the projects that belong to the ready to buy status.',
+      description:
+        'These are the projects associated to the development. Select and/or create them.',
     },
     {
       name: 'developmentAveragePrice',
