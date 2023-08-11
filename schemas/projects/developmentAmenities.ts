@@ -1,6 +1,6 @@
 export default {
-  name: 'developmentAmenities',
-  title: 'Development Amenities',
+  name: 'developmentAmenitiesType',
+  title: 'Development Amenities Type',
   type: 'document',
   fields: [
     {

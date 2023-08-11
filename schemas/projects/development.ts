@@ -115,7 +115,7 @@ export default {
       name: 'developmentAmenities',
       title: 'Development Amenities',
       type: 'reference',
-      to: [{type: 'developmentAmenities'}],
+      to: [{type: 'developmentAmenitiesType'}],
       description:
         'These are the amenities in the development. Select and create them as bundles. E.g.: Closests schools, hospitals, airport, metro etc...',
     },

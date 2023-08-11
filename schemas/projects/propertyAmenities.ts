@@ -1,6 +1,6 @@
 export default {
-  name: 'propertyAmenities',
-  title: 'Property Amenities',
+  name: 'propertyAmenitiesType',
+  title: 'Property Amenities Type',
   type: 'document',
   fields: [
     {

@@ -187,7 +187,7 @@ export default {
       name: 'projectAmenities',
       title: 'Project Amenities',
       type: 'reference',
-      to: [{type: 'projectAmenities'}],
+      to: [{type: 'projectAmenitiesType'}],
       description:
         'These are the amenities in the property/project. Select and create them as bundles.',
     },
