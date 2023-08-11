@@ -169,7 +169,7 @@ export default {
       name: 'projectId',
       title: 'Project ID',
       type: 'reference',
-      to: [{type: 'project'}],
+      to: [{type: 'projects'}],
       weak: true,
       description: 'This is the project the property is in.',
     },

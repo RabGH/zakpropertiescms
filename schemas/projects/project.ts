@@ -1,5 +1,5 @@
 export default {
-  name: 'project',
+  name: 'projects',
   title: 'Project',
   type: 'document',
   fields: [
@@ -219,18 +219,12 @@ export default {
       description: 'This indicates whether the project is offplan, ready, or both.',
     },
     {
-      name: 'propertiesOffPlan',
-      title: 'Off Plan Properties',
+      name: 'properties',
+      title: 'Properties',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'property'}]}],
-      description: 'These are the properties that belong to the offplan status.',
-    },
-    {
-      name: 'propertiesReadyToBuy',
-      title: 'Ready To Buy Properties',
-      type: 'array',
-      of: [{type: 'reference', to: [{type: 'property'}]}],
-      description: 'These are the properties that belong to the ready to buy status.',
+      description:
+        'These are the properties in/or associated the project. Select and/or create them.',
     },
     {
       name: 'paymentPlans',

@@ -77,7 +77,7 @@ export default {
       name: 'readyProjects',
       title: 'Ready Projects',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'project'}]}],
+      of: [{type: 'reference', to: [{type: 'projects'}]}],
       description: 'These are the projects that belong to the ready to buy status.',
     },
     {
