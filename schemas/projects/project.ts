@@ -94,7 +94,7 @@ export default {
       title: 'Price',
       type: 'number',
       description:
-        'This is the total price of the project. Either entire price or average for each property.',
+        'This is the starting price of the properties in the project, it will show on the project cards.',
     },
     {
       name: 'averagePrice',
