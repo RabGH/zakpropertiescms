@@ -26,12 +26,6 @@ export default {
       description: 'This is the date the development was added to the database.',
     },
     {
-      name: 'location',
-      title: 'Location',
-      type: 'geopoint',
-      description: 'This is the location of the whole development. Geopoint location.',
-    },
-    {
       name: 'developmentPropertyTypes',
       title: 'development Property Types',
       type: 'array',

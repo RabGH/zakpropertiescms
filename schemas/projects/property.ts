@@ -20,12 +20,6 @@ export default {
       description: 'This is the date the property was added to the database.',
     },
     {
-      name: 'location',
-      title: 'Location',
-      type: 'geopoint',
-      description: 'This is the location of the property. Geopoint location.',
-    },
-    {
       name: 'address',
       title: 'Address',
       type: 'reference',

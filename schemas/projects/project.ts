@@ -29,12 +29,6 @@ export default {
       description: 'This is the date the project was added to the database.',
     },
     {
-      name: 'location',
-      title: 'Location',
-      type: 'geopoint',
-      description: 'This is the location of the whole project. Geopoint location.',
-    },
-    {
       name: 'projectPropertyTypes',
       title: 'Project Property Types',
       type: 'array',
@@ -79,6 +73,7 @@ export default {
           {title: 'Urban Living', value: 'Urbran Living'},
           {title: 'Beachfront', value: 'Beachfront'},
           {title: 'Golf-side villas', value: 'Golf-side villas'},
+          {title: 'Golf-side apartments', value: 'Golf-side apartments'},
           {title: 'Lakeside homes', value: 'Lakeside homes'},
           {title: 'Waterfront properties', value: 'Waterfront properties'},
           {title: 'Pet-friendly communities', value: 'Pet-friendly communities'},

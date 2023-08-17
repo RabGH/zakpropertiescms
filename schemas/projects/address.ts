@@ -20,5 +20,11 @@ export default {
         ],
       },
     },
+    {
+      name: 'location',
+      title: 'Location',
+      type: 'geopoint',
+      description: 'This is the location of the address.',
+    },
   ],
 }
