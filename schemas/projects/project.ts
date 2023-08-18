@@ -8,7 +8,7 @@ export default {
       title: 'Title',
       type: 'string',
       description:
-        'This is the title of the project, this shows on top of the image on the home page header.',
+        'This is the title of the project, this shows on top of the image on the home page header, IMPORTANT NOT TO HAVE EXTRA SPACES.',
     },
     {
       name: 'description',

@@ -7,7 +7,7 @@ export default {
       name: 'name',
       title: 'Name',
       type: 'string',
-      description: 'This is the name of the developer.',
+      description: 'This is the name of the developer, IMPORTANT NOT TO HAVE EXTRA SPACES.',
     },
     {
       name: 'createdAt',

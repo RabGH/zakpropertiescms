@@ -7,6 +7,7 @@ export default {
       name: 'title',
       title: 'Title',
       type: 'string',
+      description: 'This is the title of the property, IMPORTANT NOT TO HAVE EXTRA SPACES.',
     },
     {
       name: 'createdAt',
