@@ -42,6 +42,7 @@ export default {
           {title: 'Urban Living', value: 'Urban Living'},
           {title: 'Beachfront property', value: 'Beachfront property'},
           {title: 'Golf-side villa', value: 'Golf-side villa'},
+          {title: 'Golf-side apartment', value: 'Golf-side apartment'},
           {title: 'Lakeside home', value: 'Lakeside home'},
           {title: 'Waterfront property', value: 'Waterfront property'},
           {title: 'Pet-friendly community', value: 'Pet-friendly communities'},
