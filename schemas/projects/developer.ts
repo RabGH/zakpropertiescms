@@ -33,12 +33,14 @@ export default {
       options: {
         hotspot: true,
       },
+      description: 'This is the main image of the developer, shows on top of card.',
     },
     {
       name: 'developerImages',
       title: 'Developer Images',
       type: 'array',
       of: [{type: 'developerImage'}],
+      description: 'These are the developers images.',
     },
     {
       name: 'description',
