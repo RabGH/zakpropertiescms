@@ -21,6 +21,18 @@ export default {
       description: 'This is the date the developer was added to the database.',
     },
     {
+      name: 'yearEstablished',
+      title: 'Year Established',
+      type: 'number',
+      description: 'This is the year the developer was established.',
+    },
+    {
+      name: 'countryOfOrigin',
+      title: 'Country of Origin',
+      type: 'string',
+      description: 'This is the country the developer is originated in.',
+    },
+    {
       name: 'logo',
       title: 'Logo',
       type: 'image',
