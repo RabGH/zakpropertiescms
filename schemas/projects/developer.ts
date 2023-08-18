@@ -57,7 +57,14 @@ export default {
       title: 'Developers Developments',
       type: 'array',
       of: [{type: 'reference', to: [{type: 'development'}]}],
-      description: 'This is the development associated with the project.',
+      description: 'These are the developments associated with the developer.',
+    },
+    {
+      name: 'developerProjects',
+      title: 'Developers Projects',
+      type: 'array',
+      of: [{type: 'reference', to: [{type: 'project'}]}],
+      description: 'These are the projects associated with the developer.',
     },
     {
       name: 'slug',
